@@ -18,7 +18,17 @@ public class ClienteServiceImpl implements IClienteService {
     }
 
     @Override
+    public Cliente findByEmail(String email) {
+        return clienteDao.findByEmail(email);
+    }
+
+    @Override
     public Cliente findById(Long id) {
         return clienteDao.findById(id).orElse(null);
+    }
+
+    @Override
+    public Cliente validarCliente(String email, String password) {
+        return clienteDao.findByEmailAndPassword(email,password);
     }
 }

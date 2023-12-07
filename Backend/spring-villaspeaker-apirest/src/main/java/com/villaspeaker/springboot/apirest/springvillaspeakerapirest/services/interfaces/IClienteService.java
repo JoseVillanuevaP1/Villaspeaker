@@ -5,5 +5,9 @@ import com.villaspeaker.springboot.apirest.springvillaspeakerapirest.entity.Clie
 public interface IClienteService {
     Cliente save(Cliente cliente);
 
+    Cliente findByEmail(String email);
+
     Cliente findById(Long id);
+
+    Cliente validarCliente(String email, String password);
 }
