@@ -4,12 +4,7 @@
 Author: W3layouts
 Author URL: http://w3layouts.com
 --*/
-/*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -738,6 +733,8 @@ pre code {
   padding-right: 0;
   padding-left: 0;
 }
+
+/******************** styles.css *******************/
 
 .col-1,
 .col-2,
@@ -19769,5 +19766,3 @@ p.abinfo-para {
   color: #fff5ee;
   opacity: .5;
 }
-
-/*# sourceMappingURL=style-freedom.css.map */

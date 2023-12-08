@@ -27,7 +27,24 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.3.1.min.js",
+              "src/assets/js/rendered.js",
+              "src/assets/js/theme-change.js",
+              "src/assets/js/jquery-2.1.4.min.js",
+              "src/assets/js/jquery.chocolat.js",
+              "src/assets/js/text-js.js",
+              "src/assets/js/jquery.waypoints.min.js",
+              "src/assets/js/jquery.countup.js",
+              "src/assets/js/counter.js",
+              "src/assets/js/testimonials.js",
+              "src/assets/js/blog-slider.js",
+              "src/assets/js/owl.carousel.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/disable-scroll.js",
+              "src/assets/js/menu.js",
+              "src/assets/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -86,7 +103,24 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.3.1.min.js",
+              "src/assets/js/theme-change.js",
+              "src/assets/js/rendered.js",
+              "src/assets/js/jquery-2.1.4.min.js",
+              "src/assets/js/jquery.chocolat.js",
+              "src/assets/js/text-js.js",
+              "src/assets/js/jquery.waypoints.min.js",
+              "src/assets/js/jquery.countup.js",
+              "src/assets/js/counter.js",
+              "src/assets/js/testimonials.js",
+              "src/assets/js/blog-slider.js",
+              "src/assets/js/owl.carousel.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/disable-scroll.js",
+              "src/assets/js/menu.js",
+              "src/assets/js/bootstrap.min.js"
+            ]
           }
         }
       }
