@@ -18,26 +18,39 @@
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                   <ul class="navbar-nav mx-lg-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#" routerLink="/about">About</a>
+                        </li>   
+                        <li class="nav-item dropdown" routerLinkActive="active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Productos <span class="fa fa-angle-down"></span>
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @for (categoria of categorias; track categorias) {
+                                    <a class="dropdown-item" href="#" [routerLink]="['/services/',categoria.id]">{{ categoria.nombre }}</a>
+                                }
+                            </div>
+
+                            <!-- <a class="nav-link" href="#">Products</a> -->
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-						  <li class="nav-item">
-                            <a class="nav-link" href="#">Contact US</a>
+						<li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" routerLink="/contact">Contact US</a>
                         </li>
                     </ul>
                     <!--/search-right-->
                     <div class="search-right">
                         <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
                     </div>
+                    <div class="search-right ml-0">
+                        <a href="#search" title="search"><span class="fa fa-shopping-cart" aria-hidden="true"></span></a>
+                    </div>
                     <!--//search-right-->
                     <div class="top-quote mr-lg-3 mt-lg-0 mr-lg-4">
-                        <a href="#" class="btn btn-style btn-white btn-primary">Get In Touch</a>
+                        <a href="#" routerLink="/contact" class="btn btn-style btn-white btn-primary">Get In Touch</a>
                     </div>
                 </div>
                 <!-- toggle switch for light and dark theme -->
@@ -54,10 +67,6 @@
                         </div>
                     </nav>
                 </div>
-                <!-- //toggle switch for light and dark theme -->
             </nav>
         </div>
     </header>
-    <!--/header-->
-
-    <!--/header-->

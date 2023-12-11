@@ -3,7 +3,6 @@ package com.villaspeaker.springboot.apirest.springvillaspeakerapirest.controller
 
 import com.villaspeaker.springboot.apirest.springvillaspeakerapirest.entity.DetalleCompra;
 import com.villaspeaker.springboot.apirest.springvillaspeakerapirest.services.interfaces.IDetalleCompraService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
