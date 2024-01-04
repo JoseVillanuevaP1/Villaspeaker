@@ -13,6 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ClienteController {
 
     @Autowired
@@ -55,15 +56,30 @@ public class ClienteController {
         return new ResponseEntity<>(client, HttpStatus.OK);
     }
 
-    @PostMapping("/clientes/validate")
-    @ResponseBody
-    public ResponseEntity<?> validateClient(@RequestParam String email,@RequestParam String password) {
+    @GetMapping("/clientes2/{email}")
+    public ResponseEntity<?> findByEmail(@PathVariable String email) {
 
         Map<String, Object> response = new HashMap<>();
-        Cliente cliente = clienteService.validarCliente(email,password);
+        Cliente client = clienteService.findByEmail(email);
+
+        if (client == null) {
+            response.put("msg", "Error, Cliente no existe");
+            return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(client, HttpStatus.OK);
+    }
+
+    @PostMapping("/clientes/validate")
+    @ResponseBody
+    public ResponseEntity<?> validateClient(@RequestBody Map<String, String> request) {
+        String email = request.get("email");
+        String password = request.get("password");
+
+        Map<String, Object> response = new HashMap<>();
+        Cliente cliente = clienteService.validarCliente(email, password);
 
         if (cliente == null) {
-            response.put("msg", "Error, Verifique sus datos o registrese por favor.");
+            response.put("msg", "Error, Verifique sus datos o regístrese por favor.");
             return new ResponseEntity<>(response, HttpStatus.UNAUTHORIZED);
         }
 

@@ -35,5 +35,10 @@ public class Cliente implements Serializable {
     @OneToMany(mappedBy = "cliente",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Compra> compra;
 
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
     private static final long serialVersionUID = 1L;
 }

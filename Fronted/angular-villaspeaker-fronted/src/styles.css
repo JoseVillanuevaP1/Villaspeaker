@@ -17678,10 +17678,11 @@ a.dropdown-item.active {
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu {
-    transform: translateX(-50px);
+    transform: translateX(-72px);
     background: var(--bg-color);
     border: 1px solid var(--border-color-light);
 }
+
 
 .navbar-expand-lg .navbar-nav .dropdown-menu:before {
     content: '';
@@ -18330,15 +18331,15 @@ nav ul li a:hover {
 }
 
 .slide:nth-child(1) .slide__inner {
-    background-image: url("/assets/images/banner1.jpg");
+    background-image: url("/assets/images/parlante.jpg");
 }
 
 .slide:nth-child(2) .slide__inner {
-    background-image: url("/assets/images/banner2.jpg");
+    background-image: url("/assets/images/parlante.jpg");
 }
 
 .slide:nth-child(3) .slide__inner {
-    background-image: url("/assets/images/banner3.jpg");
+    background-image: url("/assets/images/parlante.jpg");
 }
 
 .slide:nth-child(4) .slide__inner {
@@ -18447,7 +18448,7 @@ nav ul li a:hover {
 }
 
 .w3l-social-imf-left {
-    background: url(/assets/images/s2.jpg) no-repeat center;
+    background: url(/assets/images/audi6.jfif) no-repeat center;
     background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
@@ -18600,7 +18601,7 @@ h6.title {
 /*--//About-home--*/
 /*--/stats--*/
 .w3l-stats-sec {
-    background: url(/assets/images/banner2.jpg) no-repeat;
+    background: url(/assets/images/audi12.jfif) no-repeat;
     background-size: cover;
     position: relative;
     z-index: 1;
@@ -19466,7 +19467,7 @@ ul.gallery_agile li {
     top: 50%;
     margin-left: -40px;
     margin-top: -40px;
-    background: url("/assets/images/1.jpg") no-repeat;
+    background: url("/assets/images/audi14.jfif") no-repeat;
     cursor: pointer;
     z-index: 1;
     -webkit-backface-visibility: hidden;
@@ -19641,7 +19642,7 @@ button.owl-next {
 
 /*--/inner-banner--*/
 .inner-banner {
-    background: url(/assets/images/banner2.jpg) no-repeat center;
+    background: url(/assets/images/parlante.jpg) no-repeat center;
     background-size: cover;
     min-height: 300px;
     position: relative;
@@ -19980,7 +19981,7 @@ p.abinfo-para {
 /*--//w3l-aboutblock1--*/
 /*--/video--*/
 .w3l-about4 {
-    background: url(/assets/images/banner4.jpg) no-repeat bottom;
+    background: url(/assets/images/audi14.jfif) no-repeat bottom;
     background-size: cover;
     position: relative;
     z-index: 1;

@@ -19,10 +19,10 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                   <ul class="navbar-nav mx-lg-auto">
                         <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" routerLink="/home">Inicio<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" href="#" routerLink="/about">About</a>
+                            <a class="nav-link" href="#" routerLink="/about">Nosotros</a>
                         </li>   
                         <li class="nav-item dropdown" routerLinkActive="active">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -38,7 +38,7 @@
                             <!-- <a class="nav-link" href="#">Products</a> -->
                         </li>
 						<li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" routerLink="/contact">Contact US</a>
+                            <a class="nav-link" routerLink="/contact">Contactanos</a>
                         </li>
                     </ul>
                     <!--/search-right-->
@@ -46,12 +46,29 @@
                         <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
                     </div>
                     <div class="search-right ml-0">
-                        <a href="#search" title="search"><span class="fa fa-shopping-cart" aria-hidden="true"></span></a>
+                        <a (click)="validateLogin()">
+                            <span class="fa fa-shopping-cart" aria-hidden="true"></span>
+                        </a>
                     </div>
-                    <!--//search-right-->
-                    <div class="top-quote mr-lg-3 mt-lg-0 mr-lg-4">
-                        <a href="#" routerLink="/contact" class="btn btn-style btn-white btn-primary">Get In Touch</a>
-                    </div>
+                    @if (log) {
+                        <ul class="navbar-nav mr-2">
+                            <li class="nav-item dropdown" routerLinkActive="active">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="fa fa-user" aria-hidden="true"></span>
+                                </a>
+    
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                     <a class="dropdown-item" (click)="logout()">Cerrar Sesion</a>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    } @else {
+                        <!--//search-right-->
+                        <div class="top-quote mr-lg-3 mt-lg-0 mr-lg-4">
+                            <a href="#" routerLink="/login" class="btn btn-style btn-white btn-primary">Iniciar Sesion</a>
+                        </div>
+                    }
                 </div>
                 <!-- toggle switch for light and dark theme -->
                 <div class="mobile-position">

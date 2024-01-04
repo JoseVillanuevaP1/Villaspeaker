@@ -3,15 +3,15 @@
         <div class="container py-lg-5">
             <div class="text11-content grid-colunm-2">
                 <div class="single-left">
-                    <div class="row pb-4 blog-page-grids">
+                    <div class="row pb-4 blog-page-grids d-flex">
 
                         <!-- Aqui va el for de productos -->
                         @for (producto of productos; track producto.id) {
-                            <div class="col-lg-6 blogw3-grid">
-                                <div class="card">
+                            <div class="col-lg-6 blogw3-grid mb-4">
+                                <div class="card h-100 align-items-stretch">
                                     <div class="card-header p-0 position-relative">
                                         <a href="blog-single.html" class="zoom d-block">
-                                            <img class="card-img-bottom d-block" src="assets/images/banner1.jpg" alt="Card image cap">
+                                            <img class="card-img-bottom d-block" src="assets/images/{{producto.foto}}" alt="Card image cap">
                                         </a>
                                     </div>
                                     <div class="card-body course-details">
@@ -30,189 +30,17 @@
                                                     <span class="meta-value"> {{producto.precio}} </span>
                                                 </div>
                                                 <div class="meta-item course-students">
-                                                    <span class="fas fa-calendar-week"></span>
+                                                    <span class="fas fa-calendar-week"></span>  
                                                     <span class="meta-value"> {{producto.idCategoria}} </span>
                                                 </div>
                                             </div>
-                                            <a href="blog-single.html" class="btn btn-primary btn-style mt-4">Read
-                                                More</a>
+                                            <a class="btn btn-primary btn-style mt-4" (click)="validate()">Añadir a Carrito</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         }
-                        
 
-                        <!-- <div class="col-lg-6 blogw3-grid">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html" class="zoom d-block">
-                                        <img class="card-img-bottom d-block" src="assets/images/banner4.jpg" alt="Card image cap">
-                                    </a>
-
-                                </div>
-                                <div class="card-body course-details">
-                                    <a href="blog-single.html" class="course-desc">Chinos: the now trouser
-                                    </a>
-                                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur elit. </p>
-                                    <div class="blog-bottom-info">
-
-                                        <div class="course-meta">
-                                            <div class="meta-item course-lesson">
-                                                <span class="fas fa-heart"></span>
-                                                <span class="meta-value"> 24 </span>
-                                            </div>
-                                            <div class="meta-item course-students">
-                                                <span class="fas fa-eye"></span>
-                                                <span class="meta-value"> 115 </span>
-                                            </div>
-                                            <div class="meta-item course-students">
-                                                <span class="fas fa-calendar-week"></span>
-                                                <span class="meta-value"> 09.05.2021 </span>
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html" class="btn btn-primary btn-style mt-4">Read
-                                            More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 blogw3-grid mt-5">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html" class="zoom d-block">
-                                        <img class="card-img-bottom d-block" src="assets/images/banner3.jpg" alt="Card image cap">
-                                    </a>
-
-                                </div>
-                                <div class="card-body course-details">
-                                    <a href="blog-single.html" class="course-desc">Fall - Summer Collections 2021
-                                    </a>
-                                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur elit. </p>
-                                    <div class="blog-bottom-info">
-
-                                        <div class="course-meta">
-                                            <div class="meta-item course-lesson">
-                                                <span class="fas fa-heart"></span>
-                                                <span class="meta-value"> 24 </span>
-                                            </div>
-                                            <div class="meta-item course-students">
-                                                <span class="fas fa-eye"></span>
-                                                <span class="meta-value"> 125 </span>
-                                            </div>
-                                            <div class="meta-item course-students">
-                                                <span class="fas fa-calendar-week"></span>
-                                                <span class="meta-value"> 12.05.2021 </span>
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html" class="btn btn-primary btn-style mt-4">Read
-                                            More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 blogw3-grid mt-5">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html" class="zoom d-block">
-                                        <img class="card-img-bottom d-block" src="assets/images/banner6.jpg" alt="Card image cap">
-                                    </a>
-                                </div>
-                                <div class="card-body course-details">
-                                    <a href="blog-single.html" class="course-desc">Eternity Bands Do Last Forever
-                                    </a>
-                                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur elit. </p>
-                                    <div class="blog-bottom-info">
-
-                                        <div class="course-meta">
-                                            <div class="meta-item course-lesson">
-                                                <span class="fas fa-heart"></span>
-                                                <span class="meta-value"> 24 </span>
-                                            </div>
-                                            <div class="meta-item course-students">
-                                                <span class="fas fa-eye"></span>
-                                                <span class="meta-value"> 105 </span>
-                                            </div>
-                                            <div class="meta-item course-students">
-                                                <span class="fas fa-calendar-week"></span>
-                                                <span class="meta-value"> 15.05.2021 </span>
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html" class="btn btn-primary btn-style mt-4">Read
-                                            More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 blogw3-grid mt-5">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html" class="zoom d-block">
-                                        <img class="card-img-bottom d-block" src="assets/images/banner5.jpg" alt="Card image cap">
-                                    </a>
-                                </div>
-                                <div class="card-body course-details">
-                                    <a href="blog-single.html" class="course-desc">Multi-pocket Chest Bag Black
-                                    </a>
-                                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur elit. </p>
-                                    <div class="blog-bottom-info">
-
-                                        <div class="course-meta">
-                                            <div class="meta-item course-lesson">
-                                                <span class="fas fa-heart"></span>
-                                                <span class="meta-value"> 24 </span>
-                                            </div>
-                                            <div class="meta-item course-students">
-                                                <span class="fas fa-eye"></span>
-                                                <span class="meta-value"> 115 </span>
-                                            </div>
-                                            <div class="meta-item course-students">
-                                                <span class="fas fa-calendar-week"></span>
-                                                <span class="meta-value"> 18.05.2021 </span>
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html" class="btn btn-primary btn-style mt-4">Read
-                                            More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 blogw3-grid mt-5">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html" class="zoom d-block">
-                                        <img class="card-img-bottom d-block" src="assets/images/banner2.jpg" alt="Card image cap">
-                                    </a>
-                                </div>
-                                <div class="card-body course-details">
-                                    <a href="blog-single.html" class="course-desc">Casual basics and trendy key
-                                        pieces.
-                                    </a>
-                                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur elit. </p>
-                                    <div class="blog-bottom-info">
-
-                                        <div class="course-meta">
-                                            <div class="meta-item course-lesson">
-                                                <span class="fas fa-heart"></span>
-                                                <span class="meta-value"> 24 </span>
-                                            </div>
-                                            <div class="meta-item course-students">
-                                                <span class="fas fa-eye"></span>
-                                                <span class="meta-value"> 225 </span>
-                                            </div>
-                                            <div class="meta-item course-students">
-                                                <span class="fas fa-calendar-week"></span>
-                                                <span class="meta-value"> 20.05.2021 </span>
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html" class="btn btn-primary btn-style mt-4">Read
-                                            More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="pagination-wrapper mt-5 pt-lg-3 text-center">
                         <ul class="page-pagination">
@@ -221,7 +49,7 @@
                             <li><a class="page-numbers" href="#url">3</a></li>
                             <li><a class="page-numbers" href="#url">...</a></li>
                             <li><a class="page-numbers" href="#url">15</a></li>
-                            <li><a class="next" href="#url">Next <span class="fa fa-angle-right"></span></a></li>
+                            <li><a class="next" href="#url">Siguiente <span class="fa fa-angle-right"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -229,7 +57,7 @@
                 <div class="right-side-bar mt-lg-0 mt-5">
 
                     <aside class="posts">
-                        <h3 class="aside-title">All Categories</h3>
+                        <h3 class="aside-title">Categorias</h3>
                         <ul class="category">
 
                             @for (categoria of categorias; track categoria.id) {
@@ -245,73 +73,67 @@
                             <div class="posts-grid-inner">
                                 <div class="posts-grid-left pr-0">
                                     <a href="blog-single.html">
-                                        <img src="assets/images/3.jpg" alt=" " class="img-fluid radius-image">
+                                        <img src="assets/images/audi3.jfif" alt=" " class="img-fluid radius-image">
                                     </a>
                                 </div>
                                 <div class="posts-grid-right">
                                     <h4>
-                                        <a href="blog-single.html" class="text-bl">Integer sit amet mattis quam.</a>
+                                        <a href="blog-single.html" class="text-bl">Audifono Bluetooht Gold Plus.</a>
                                     </h4>
-                                    <span class="price"> 11 Minutes ago</span>
+                                    <span class="price"> hace 11 minutos</span>
                                 </div>
                             </div>
                             <div class="posts-grid-inner my-4">
                                 <div class="posts-grid-left pr-0">
                                     <a href="blog-single.html">
-                                        <img src="assets/images/2.jpg" alt=" " class="img-fluid radius-image">
+                                        <img src="assets/images/audi4.jfif" alt=" " class="img-fluid radius-image">
                                     </a>
                                 </div>
                                 <div class="posts-grid-right">
                                     <h4>
-                                        <a href="blog-single.html" class="text-bl">Integer sit amet mattis quam.</a>
+                                        <a href="blog-single.html" class="text-bl">Audifono Bluetooht Blue Ultra.</a>
                                     </h4>
-                                    <span class="price"> 15 Minutes ago</span>
+                                    <span class="price"> hace 15 minutos</span>
                                 </div>
                             </div>
                         </div>
                     </aside>
 
                     <aside class="posts">
-                        <h3 class="aside-title">Instagram Posts</h3>
+                        <h3 class="aside-title">Publicaciones de Instagram</h3>
                         <div class="row posts-grid">
                             <a href="#insta" class="col-4">
-                                <img src="assets/images/about1.jpg" alt=" " class="img-fluid radius-image">
+                                <img src="assets/images/audi14.jfif" alt=" " class="img-fluid radius-image">
                             </a>
                             <a href="#insta" class="col-4">
-                                <img src="assets/images/about2.jpg" alt=" " class="img-fluid radius-image">
+                                <img src="assets/images/audi15.jfif" alt=" " class="img-fluid radius-image">
                             </a>
                             <a href="#insta" class="col-4">
-                                <img src="assets/images/about3.jpg" alt=" " class="img-fluid radius-image">
+                                <img src="assets/images/audi16.jfif" alt=" " class="img-fluid radius-image">
                             </a>
                             <a href="#insta" class="col-4 mt-3">
-                                <img src="assets/images/about4.jpg" alt=" " class="img-fluid radius-image">
+                                <img src="assets/images/audi17.jfif" alt=" " class="img-fluid radius-image">
                             </a>
                             <a href="#insta" class="col-4 mt-3">
-                                <img src="assets/images/about5.jpg" alt=" " class="img-fluid radius-image">
+                                <img src="assets/images/audi18.jfif" alt=" " class="img-fluid radius-image">
                             </a>
                             <a href="#insta" class="col-4 mt-3">
-                                <img src="assets/images/about6.jpg" alt=" " class="img-fluid radius-image">
+                                <img src="assets/images/audi19.jfif" alt=" " class="img-fluid radius-image">
                             </a>
 
                         </div>
                     </aside>
                     <aside class="posts">
-                        <h3 class="aside-title">Popular Tags</h3>
+                        <h3 class="aside-title">Etiquetas Populares</h3>
                         <ul class="tags-list">
-                            <li><a href="#tag"> Cloths</a></li>
-                            <li><a href="#tag"> Shoes</a></li>
-                            <li><a href="#tag"> Cosmetics</a></li>
-                            <li><a href="#tag"> Watches</a></li>
-                            <li><a href="#tag"> Fashion</a></li>
-                            <li><a href="#tag"> Discount</a></li>
-                            <li><a href="#tag"> Offer</a></li>
+                            <li><a href="#tag"> Radios</a></li>
+                            <li><a href="#tag"> Audifonos</a></li>
+                            <li><a href="#tag"> Cargadores</a></li>
+                            <li><a href="#tag"> Parlanes</a></li>
+                            <li><a href="#tag"> Equipos de Sonido</a></li>
+                            <li><a href="#tag"> Sonido</a></li>
+                            <li><a href="#tag"> Ofertas</a></li>
                         </ul>
-                    </aside>
-                    <aside class="posts">
-                        <h3 class="aside-title">Advertisement</h3>
-                        <a href="blog-single.html">
-                            <img src="assets/images/banner5.jpg" alt=" " class="img-fluid radius-image">
-                        </a>
                     </aside>
                 </div>
                 <!-- //right side bar -->
